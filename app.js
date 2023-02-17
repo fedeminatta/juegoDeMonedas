@@ -24,7 +24,6 @@ function crearCuadros() {
 		let random = Math.ceil(Math.random() * input.value);
 		let estilo = comprobar(random);
 		contenido.insertAdjacentHTML('afterbegin', `<div class='cuadro ${estilo}'>${random}</div>`);
-		console.log(i);
 	}
 	if (coincidencia == 1) {
 		var mensaje = `Se ha producido ${coincidencia} coincidencia y has ganado ${coincidencia} moneda.`;
