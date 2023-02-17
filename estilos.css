@@ -6,30 +6,32 @@
 }
 
 body {
-	background: #063f47;
+	background: #010202;
 	color: #fff;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	overflow: hidden;
 }
 
 .contenedor {
 	padding: 15px;
-	background: #036370;
+	background: #a36124;
 	display: flex;
 	gap: 15px;
 	width: 600px;
+	max-width: 97%;
 	flex-direction: column;
+	flex-wrap: wrap;
 	border-radius: 4px;
 	margin-top: 30px;
+	z-index: 100;
 }
 
 .boton {
 	padding: 5px 5px;
 	width: 140px;
 	max-width: 100%;
-	background-color: #063f47;
-	color: #fff;
+	background-color: #ffd8b4;
+	color: #000;
+	font-weight: bold;
 	border: none;
 	outline: none;
 	transition: transform 0.3s;
@@ -49,12 +51,14 @@ input {
 	max-width: 95%;
 	outline: none;
 	border: none;
+	background-color: #ffd8b4;
+	font-weight: bold;
 	transition: border 0.1s;
 	border-radius: 2px;
 }
 
 input:focus {
-	border-bottom: solid 4px #059635;
+	border-bottom: solid 4px #000;
 }
 
 img {
@@ -96,4 +100,45 @@ img {
 .grande {
 	font-size: 1.5em;
 	color: red;
+}
+
+section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 400px;
+	padding-top: 100px;
+	background: #ffd8b4;
+}
+
+.curve {
+	position: absolute;
+	height: 250px;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+}
+
+.curve::before {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+	width: 55%;
+	height: 100%;
+	transform: translate(85%, 60%);
+	background-color: hsl(0, 0%, 0%);
+}
+
+.curve::after {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+	width: 55%;
+	height: 100%;
+	background-color: #ffd8b4;
+	transform: translate(-4%, 40%);
+	z-index: -1;
 }
